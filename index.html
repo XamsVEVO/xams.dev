@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+███████████████████████████████████████████████████████████                            
+███████████████████████████████████████████████████████████                            
+███████████████████████████████████████████████████████████                            
+███████████████████████████████████████████████████████████                            
+██████████████████████████████████████████████████████████                             
+██████████████████████████████████████████████████████████                                
+█████████████████████████████████████████████████████████                             
+████████████████████████████████████████████████████████                                  
+██████████████████████████████████████████████████████                                
+█████████████████████████████████████████████████████                                 
+███████████████████████████████████████████████████                                     
+█████████████████████████████████████████████████                                        
+███████████████████████████████████████████████                                         
+████████████████████████████████████████████                                          
+██████████████████████████████████████████                                              
+███████████████████████████████████████                                                 
+███████████████████████████████████                                                    
+██████████████████████████████                                                       
+████████████████████████                                                            
+████████████████   
+                                                                
+█
+███
+█████
+███████
+█████████
+███████████
+█████████████
+███████████████
+█████████████████
+███████████████████
+█████████████████████
+███████████████████████
+█████████████████████████
+███████████████████████████
+
+running Drape
+Curtain © 2020				 
+be a good person.  have a good day.
+-->
+<html>
+  <head>
+    <title>xams.</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <script src="libs/p5.min.js"></script>
+    <script src="libs/color-scheme.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body class="noselect">
+    <div id="WRAPPER" oncontextmenu="return false;">
+      <!-- right click user, forgive me for my sins-->
+      <noscript>
+        <div id="noscripttext">
+          <p class="d">
+            Please enable JavaScript to view this site in full.<br />
+          </p>
+        </div>
+      </noscript>
+      <div id="fadein"></div>
+      <div
+        id="logocontain"
+        onclick="toggleGrowing();"
+        onmouseover="normalTheme();"
+        style="position: fixed; left: 10px; top: 10px"
+      >
+        <svg
+          id="logo"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="57.5px"
+          height="50px"
+          viewBox="0 0 67.5 50"
+          enable-background="new 0 0 67.5 50"
+          xml:space="preserve"
+        >
+          <image
+            xlink:href="https://xams.dev/icon.png"
+            x="10"
+            width="57.5"
+            height="50"
+            preserveAspectRatio="none"
+          />
+          <!-- Set the x attribute of the image element to 10 to shift it 10 pixels to the right of the container. -->
+          <!-- Set the preserveAspectRatio attribute to "none" to prevent the image from being stretched to fit the viewBox dimensions. -->
+        </svg>
+      </div>
+    </div>
+    <div id="clientcontainer">
+      <a>
+        <span
+          id="filmbig"
+          onclick="window.location.replace('https://xams.dev/films')"
+          onmouseover="filmHover();"
+          >VIDEOS<span id="filmsmall" class="smallfont">SEGMENTS</span></span
+        ><br />
+        <span
+          id="codebig"
+          onclick="window.open('https://github.com/XamsVEVO', '_blank')"
+          onmouseover="codeHover();"
+          >CODE<span id="peppersmall" class="smallfont">GITHUB</span></span
+        ><br />
+        <span
+          id="musicbig"
+          onclick="window.open('https://www.google.com', '_blank')"
+          onmouseover="musicHover();"
+          >MUSIC<span id="musicsmall" class="smallfont"
+            >WORK IN PROGRESS</span
+          ></span
+        ><br />
+        <!--  <span class="bllink">EMAIL</span> -->
+      </a>
+    </div>
+  </body>
+</html>

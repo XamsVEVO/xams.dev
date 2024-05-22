@@ -1,0 +1,297 @@
+:root {
+    --logoFill: #b0145a;
+    --UIFill: #b0145a;
+    --BGFill: #030009;
+    --altFill: #b0145a;
+    --coverOpacity: 1;
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url('fonts/HDG2.woff');
+}
+
+@font-face {
+    font-family: thinFont;
+    src: url('fonts/HDW.woff');
+}
+
+@font-face {
+    font-family: longFont;
+    src: url('fonts/c.woff');
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    font-family: mainFont;
+    text-rendering: optimizeLegibility;
+    color: var(--UIFill) !important;
+    background-color: var(--BGFill) !important;
+}
+
+#WRAPPER {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#fadein {
+    pointer-events: none;
+    z-index: 9999;
+    background-color: #030009;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-animation: fadeout 2s;
+    -moz-animation: fadeout 2s;
+    -ms-animation: fadeout 2s;
+    -o-animation: fadeout 2s;
+    animation: fadeout 2s;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+canvas {
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -ms-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    animation: fadein 1s;
+}
+
+.fillsvg {
+    fill: var(--logoFill) !important;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px 3px 4px 4px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#video-section {
+    margin-top: 20vh;
+    /* add margin to make space for logo */
+    position: relative;
+    /* set position to relative to allow for z-index to work */
+}
+
+#logo {
+    height: 50px;
+    width: 57.5px;
+}
+
+#logocontain {
+    position: absolute;
+    /* set position to absolute to position the logo on the page */
+    top: 10px;
+    /* adjust top position to position the logo vertically */
+    left: 10px;
+    /* adjust left position to position the logo horizontally */
+    z-index: 1;
+    /* set z-index to position the logo below other elements on the page */
+    display: flex;
+    /* use flexbox to position the clickText div and the svg image horizontally */
+    align-items: center;
+    transition: all 0.25s ease-out;
+}
+
+#clickText {
+    display: flex;
+    /* use flexbox to position the text and the arrow horizontally */
+    align-items: center;
+    /* center the items vertically */
+    background-color: #ffffff;
+    /* set the background color to white */
+    padding: 5px;
+    /* add padding to the text */
+    margin-left: 10px;
+    /* add margin to space out the text and the logo */
+    color: #b0145a;
+    /* set the color of the text to #b0145a */
+}
+
+#arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url('arrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Layer_1 {
+    position: relative;
+    /* set position to relative to allow for positioning of child elements */
+}
+
+#clickText:hover {
+    cursor: pointer;
+    /* add hover effect to cursor when hovering over text */
+}
+
+
+
+#clientcontainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 2vh;
+    transform: translate(0, -50%);
+    font-size: 4vh !important;
+    line-height: 3.35vh;
+    letter-spacing: -0.1vh;
+    z-index: 5;
+}
+
+.smallfont {
+    font-family: thinFont;
+    font-size: 1.4vh;
+    line-height: 0.2vh;
+    position: relative;
+    bottom: 0.05vh;
+    color: var(--altFill) !important;
+}
+
+#video-section h1,
+#segments {
+    font-family: longFont;
+    font-size: 5vw;
+    line-height: 5vw;
+    margin-top: 2.5vh;
+    margin-bottom: 1.5vh;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.1vw;
+    color: var(--UIFill) !important;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-column {
+    margin: 1vh 1vw;
+    flex-basis: 40%;
+    max-width: 40%;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-grid-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-column-2 {
+    margin: 1vh;
+    flex-basis: calc(33.33% - 2vh);
+    max-width: calc(33.33% - 2vh);
+}
+
+@media screen and (max-width: 768px) {
+
+    .video-column,
+    .video-column-2 {
+        flex-basis: calc(50% - 2vh);
+        max-width: calc(50% - 2vh);
+    }
+
+    #video-section h1,
+    #segments {
+        font-size: 6vw;
+        line-height: 6vw;
+    }
+
+    .video-title {
+        font-size: 3.5vw;
+        line-height: 4vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #video-section h1,
+    #segments {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+
+    .video-title {
+        font-size: 2vw;
+        line-height: 5vw;
+    }
+}
+
+.section-title {
+    font-size: 5vw;
+    line-height: 5vw;
+    letter-spacing: -0.1vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.video-title {
+    font-size: 2vw;
+    line-height: 4.5vw;
+    letter-spacing: -0.1vw;
+    text-transform: uppercase;
+}

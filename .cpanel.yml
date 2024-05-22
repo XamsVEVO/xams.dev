@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/xams/public_html # Update with your cPanel account username
+    - /usr/local/cpanel/3rdparty/bin/git pull origin main
+    - /usr/local/cpanel/3rdparty/bin/git checkout main
+    - /usr/local/cpanel/3rdparty/bin/git pull origin main
+    - /bin/cp -r * $DEPLOYPATH
+    - /usr/local/cpanel/3rdparty/bin/git checkout --
