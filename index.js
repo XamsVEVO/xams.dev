@@ -55,16 +55,16 @@ function normalTheme() {
     document.documentElement.style.setProperty('--altFill', '#000');
 }
 
-function filmHover() {
-    currentParticleColor = convertHex('d81a49');
-    currentBGColor = convertHex('030009');
-    // currentAltColor = [ 35,207,176 ];
-    document.documentElement.style.setProperty('--BGFill', '#030009');
-    document.documentElement.style.setProperty('--logoFill', '#b0145a');
-    document.documentElement.style.setProperty('--UIFill', '#b0145a');
-    // document.documentElement.style.setProperty('--UIFill', 'rgb(' + currentAltColor[0] + ',' + currentAltColor[1] + ',' + currentAltColor[2] + ')');
-    document.documentElement.style.setProperty('--altFill', '#fff');
-}
+// function filmHover() {
+//     currentParticleColor = convertHex('d81a49');
+//     currentBGColor = convertHex('030009');
+//     // currentAltColor = [ 35,207,176 ];
+//     document.documentElement.style.setProperty('--BGFill', '#030009');
+//     document.documentElement.style.setProperty('--logoFill', '#b0145a');
+//     document.documentElement.style.setProperty('--UIFill', '#b0145a');
+//     // document.documentElement.style.setProperty('--UIFill', 'rgb(' + currentAltColor[0] + ',' + currentAltColor[1] + ',' + currentAltColor[2] + ')');
+//     document.documentElement.style.setProperty('--altFill', '#fff');
+// }
 
 function codeHover() {
     currentParticleColor = convertHex('c0636c');
@@ -78,19 +78,19 @@ function codeHover() {
     document.documentElement.style.setProperty('--altFill', '#c0636c');
 }
 
-function musicHover() {
-    currentParticleColor = [175, 195, 255];
-    // currentBGColor = [ 28,56,28 ];
-    // currentBGColor = [ 50,22,31 ];
-    currentBGColor = convertHex('185738');
+// function musicHover() {
+//     currentParticleColor = [175, 195, 255];
+//     // currentBGColor = [ 28,56,28 ];
+//     // currentBGColor = [ 50,22,31 ];
+//     currentBGColor = convertHex('185738');
 
-    document.documentElement.style.setProperty('--BGFill', '#185738');
+//     document.documentElement.style.setProperty('--BGFill', '#185738');
 
-    document.documentElement.style.setProperty('--logoFill', '#b9ba6c');
-    // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-    document.documentElement.style.setProperty('--UIFill', '#b9ba6c');
-    document.documentElement.style.setProperty('--altFill', '#b3ae88');
-}
+//     document.documentElement.style.setProperty('--logoFill', '#b9ba6c');
+//     // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
+//     document.documentElement.style.setProperty('--UIFill', '#b9ba6c');
+//     document.documentElement.style.setProperty('--altFill', '#b3ae88');
+// }
 //function tiaraHover(){
 //    currentParticleColor = [175,195,255];
 //    currentBGColor = [ 47,45,66 ];
