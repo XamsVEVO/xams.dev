@@ -67,15 +67,7 @@ function normalTheme() {
 // }
 
 function codeHover() {
-    currentParticleColor = convertHex('c0636c');
-    currentBGColor = convertHex('4b233e');
-
-    document.documentElement.style.setProperty('--BGFill', '#4b233e');
-
-    document.documentElement.style.setProperty('--logoFill', '#e6cec2');
-    // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-    document.documentElement.style.setProperty('--UIFill', '#e6cec2');
-    document.documentElement.style.setProperty('--altFill', '#c0636c');
+    randomizeScheme();
 }
 
 // function musicHover() {
@@ -264,8 +256,13 @@ function randomizeScheme() {
 }
 
 window.addEventListener("keydown", function (e) {
-    randomizeScheme();
+    toggleGrowing();
 });
+
+document.getElementById("codebig").addEventListener("click", function() {
+    toggleGrowing();
+});
+
 
 function preventBehavior(e) {
     e.preventDefault();
