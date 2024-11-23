@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tqellyxajc/xams.dev
+    - /bin/cp -R images $DEPLOYPATH

@@ -55,95 +55,9 @@ function normalTheme() {
     document.documentElement.style.setProperty('--altFill', '#000');
 }
 
-// function filmHover() {
-//     currentParticleColor = convertHex('d81a49');
-//     currentBGColor = convertHex('030009');
-//     // currentAltColor = [ 35,207,176 ];
-//     document.documentElement.style.setProperty('--BGFill', '#030009');
-//     document.documentElement.style.setProperty('--logoFill', '#b0145a');
-//     document.documentElement.style.setProperty('--UIFill', '#b0145a');
-//     // document.documentElement.style.setProperty('--UIFill', 'rgb(' + currentAltColor[0] + ',' + currentAltColor[1] + ',' + currentAltColor[2] + ')');
-//     document.documentElement.style.setProperty('--altFill', '#fff');
-// }
-
 function codeHover() {
     randomizeScheme();
 }
-
-// function musicHover() {
-//     currentParticleColor = [175, 195, 255];
-//     // currentBGColor = [ 28,56,28 ];
-//     // currentBGColor = [ 50,22,31 ];
-//     currentBGColor = convertHex('185738');
-
-//     document.documentElement.style.setProperty('--BGFill', '#185738');
-
-//     document.documentElement.style.setProperty('--logoFill', '#b9ba6c');
-//     // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-//     document.documentElement.style.setProperty('--UIFill', '#b9ba6c');
-//     document.documentElement.style.setProperty('--altFill', '#b3ae88');
-// }
-//function tiaraHover(){
-//    currentParticleColor = [175,195,255];
-//    currentBGColor = [ 47,45,66 ];
-//    document.documentElement.style.setProperty('--BGFill', '#2f2d42');
-//    document.documentElement.style.setProperty('--logoFill', 'rgb(217,212,219)');
-//    document.documentElement.style.setProperty('--UIFill', 'rgb(217,212,219)');
-//    document.documentElement.style.setProperty('--altFill', '#acaab5');
-//}
-//
-//function rockHover(){
-//    currentParticleColor = [74,200,74];
-//    // currentBGColor = [ 28,56,28 ];
-//    // currentBGColor = [ 50,22,31 ];
-//    currentBGColor = [ 74,51,37 ];
-//
-//    document.documentElement.style.setProperty('--BGFill', '#4a3325');
-//
-//    document.documentElement.style.setProperty('--logoFill', '#fff');
-//    document.documentElement.style.setProperty('--UIFill', 'rgb(243,202,146)');
-//    document.documentElement.style.setProperty('--altFill', '#fff');
-//}
-//
-//function mittsHover(){
-//    currentParticleColor = [254,124,4];
-//    // currentBGColor = [ 28,56,28 ];
-//    // currentBGColor = [ 50,22,31 ];
-//    currentBGColor = [ 20,20,20 ];
-//
-//    document.documentElement.style.setProperty('--BGFill', '#141414');
-//
-//    document.documentElement.style.setProperty('--logoFill', 'rgb(90,90,90)');
-//    // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-//    document.documentElement.style.setProperty('--UIFill', 'rgb(254,124,4)');
-//    document.documentElement.style.setProperty('--altFill', 'rgb(90,90,90)');
-//}
-//
-//function mcHover(){
-//    currentParticleColor = convertHex('5c7241');
-//    // currentBGColor = [ 28,56,28 ];
-//    // currentBGColor = [ 50,22,31 ];
-//    currentBGColor = convertHex('185738');
-//
-//    document.documentElement.style.setProperty('--BGFill', '#185738');
-//
-//    document.documentElement.style.setProperty('--logoFill', '#b9ba6c');
-//    // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-//    document.documentElement.style.setProperty('--UIFill', '#b9ba6c');
-//    document.documentElement.style.setProperty('--altFill', '#b3ae88');
-//}
-//
-//function pepperHover(){
-//    currentParticleColor = convertHex('c0636c');
-//    currentBGColor = convertHex('4b233e');
-//
-//    document.documentElement.style.setProperty('--BGFill', '#4b233e');
-//
-//    document.documentElement.style.setProperty('--logoFill', '#e6cec2');
-//    // document.documentElement.style.setProperty('--UIFill', 'rgb(255,102,206)');
-//    document.documentElement.style.setProperty('--UIFill', '#e6cec2');
-//    document.documentElement.style.setProperty('--altFill', '#c0636c');
-//}
 
 function toggleGrowing() {
     growing = !growing;
@@ -168,12 +82,6 @@ function setup() {
 
     window.scrollTo(0, 0);
 
-    /*
-    eventFire(document.getElementById('defaultCanvas0'), 'click');
-    normalTheme();
-    window.scrollTo(0,0);
-    */
-
 }
 
 function draw() {
@@ -183,9 +91,6 @@ function draw() {
 
     rotateY(frameCount * 0.002);
     rotateX(frameCount * 0.0015);
-
-    // pointLight(255, 255, 255, 0, 0, 3030);
-    // pointLight(255, 255, 255, 500, 0, 20540);
 
     for (let j = -12; j < 12; j++) {
         push();
@@ -212,8 +117,6 @@ function draw() {
     if (!growing) {
         frameCount -= 2;
     }
-
-    // window.scrollTo(0,0);
 
 }
 
@@ -291,9 +194,3 @@ document.addEventListener("mousedown", function (event) {
     lasty = event.clientY;
     document.getElementById("defaultCanvas0").style.cursor = "grabbing";
 }, false);
-
-/*
-document.addEventListener("touchstart", function(event) {
-    randomizeScheme();
-}, false);
-*/
