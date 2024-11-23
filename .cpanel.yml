@@ -1,5 +1,18 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tqellyxajc/xams.dev
-    - /bin/cp -R images $DEPLOYPATH
+    - export DEPLOY_PATH=/home/tqellyxajc/xams.dev
+
+    # Pre-deployment tasks (optional)
+    - echo "Starting deployment process..."
+    - rm -rf $DEPLOY_PATH/*  # Clean the deployment directory
+    - mkdir -p $DEPLOY_PATH  # Ensure the directory exists
+
+    # Deployment tasks
+    - echo "Copying files to deployment directory..."
+    - /bin/cp -r * $DEPLOY_PATH
+
+    # Post-deployment tasks (optional)
+    - echo "Deployment complete!"
+    - find $DEPLOY_PATH -type f -exec chmod 644 {} \;  # Set file permissions
+    - find $DEPLOY_PATH -type d -exec chmod 755 {} \;  # Set directory permissions
